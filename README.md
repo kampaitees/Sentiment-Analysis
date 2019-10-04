@@ -125,7 +125,7 @@ Enough with the theory part, let’s get hands-on and write python code for extr
 
 ## Importing Libraries
 
-    import graphlab as gl
+    import graphlab
 
 ## Loading Dataset
  
