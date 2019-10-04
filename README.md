@@ -52,7 +52,7 @@ etc...
 
 In this article we are going to discuss **Word Count**, **Tf-Idf** method only.
 
-## What is Word Count method
+## What is Word Count method?
 Here we break the sentence into it's component words then calculate the count of the each word and store the information in form of python dicitonary with word as a key and count of each word as value of that key.
 
 **Example**
@@ -71,17 +71,67 @@ So same **word Count** vector will be created for all the sentences and in the a
 So from this we can see that this type of vectors are very sparse as out of 10000 words there is possiblity that only 10-20 words are there in a sentence so rest are just zero's.
 so after calculating the **Word Count** vector we feed this vector to the classifier to train it and later it can be used to predict the sentiment of the sentence.
 
+## Limitation of Word Count method
+
+- Frequently occurring words present in all files of corpus irrespective of the sentiment, like in this case, ‘movie’, ‘acting’, etc       will be treated equally like other distinguishing words in the document.
+
+- Stop words will be present in the vocab if not processed properly.
+
+- Rare words or key words which can be distinguishing will not get special weight.
+
+**Here comes tf-idf weighting factor which eliminates these limitations. The first question that comes to your mind  is “what does tf-idf do to these conventional features ?”.**
+
+## What is TF-IDF method?
+
+Full form of **TF-IDF** is **TERM FREQUENCY-INVERSE DOCUMENT FREQUENCY**
+
+**TERM FREQUENCY**
+
+It increases the weight of the terms (words) that occur more frequently in the document. Quite intuitive, right ?? So it can be defined as  tf(t,d) = F(t,d) where F(t,d) is number of occurrences of term ‘t’ in document ‘d’. But practically, it seems unlikely that thirty occurrences of a term in a document truly carry thirty times the significance of a single occurrence. So, in order to make it more pragmatic, we scale tf in logarithmic way so that as the frequency of terms increases exponentially, we will be increasing the weights of terms in additive manner.
+
+                                          tf(t,d) = log(F(t,d))
+**INVERSE DOCUMENT FREQUENCY**
+
+It diminishes the weight of the terms that occur in all the documents of corpus and similarly increases the weight of the terms that occur in rare documents across the corpus. Basically, the rare keywords get special treatment and stop words/non-distinguishing words get punishment. We define idf as:
+                                    
+                                        idf(t,D) = log(N/Nt∈d)
+
+Here, ‘N’ is the total number of files in the corpus ‘D’ and ‘Nt ∈ d‘ is number of files in which term ‘t’ is present. By now, we can agree to the fact that tf is a intra-document factor which depends on individual document and idf is a per corpus factor which is constant for a corpus. Finally, We calculate tf-idf as:
+
+                                        tf-idf(t,d,D) = tf(t,d) . idf(t,D)
+
+Enough with the theory part, let’s get hands on and write python code for extracting such features using **GraphLab** machine learning library. It is an open source python ML library which can be used by separate installation following [this](https://turi.com/download/install-graphlab-create.html).
+
+
+
+                                        
 ## Applications
 
 **How is sentiment analysis used?**
+
 Broadly speaking, sentiment analysis is most effective when used as a tool for Voice of Customer and Voice of Employee. Business analysts, product managers, customer support directors, human resources and workforce analysts, and other stakeholders use sentiment analysis to understand how customers and employees feel about particular subjects, and why they feel that way.
 
 **Sentiment analysis for voice of customer**
+
 In the age of social media, a single viral review can burn down an entire brand. On the other hand, research by Bain & Co. shows that good experiences can grow 4-8% revenue over competition by increasing customer lifecycle 6-14x and improving retention up to 55%.
 
 Automated sentiment analysis tools are the key drivers of this growth. By analyzing tweets, online reviews and news articles at scale, business analysts gain useful insights into how customers feel about their brands, products and services. Customer support directors and social media managers flag and address trending issues before they go viral, while forwarding these pain points to product managers to make informed feature decisions.
 
 **Sentiment analysis for voice of employee**
+
 The cost of replacing a single employee averages 20-30% of salary, according to the Center for American Progress. Yet 20% of workers voluntarily leave their jobs each year, while another 17% are fired or let go. To combat this issue, human resources teams are turning to data analytics to help them reduce turnover and improve performance.
 
 Sentiment analysis helps workforce analysts and HR directors cut off employee churn at the source by understanding what employees are discussing and how they feel. Through rich analytics of employee surveys, Slack messages, emails, and other communications, HR teams get the info they need to proactively address pain points and improve morale.
+
+
+## Conclusion
+
+The age of getting meaningful insights from social media data has now arrived with the advance in technology. The above **Amazon** case study gives you a glimpse of the power of Contextual Semantic Search. It’s time for your organization to move beyond overall sentiment and count based metrics. Companies have been leveraging the power of data lately, but to get the deepest of the information, you have to leverage the power of AI, Deep learning and intelligent classifiers like Contextual Semantic Search and Sentiment Analysis.
+
+Hope I have made justice to Tf-Idf features in this article. I have tried to explain the usefulness of these features with sentiment analysis application. Beginners are encouraged to implement it, match their outputs with the results shown here. Also, try to analyse the difference between conventional word count features and tf-idf weighted features.
+
+The machine learning models (Logistic Regression) have been implemented here without giving mathematical background. It may overwhelm the readers with so much of information in a single article. One may apply other variants of these classifiers and other classifiers available in the **Graph Lab** in order to make comparison and analyse the underlying differences among them. Here, the purpose was to present an understanding of **Word Count** and **Term Frequency & Inverse Document Frequency** and its importance in text mining applications.
+
+In addition, the full python implementation of sentiment analysis on polarity movie review data-set using both type of features can be found on Github link [here](https://github.com/kampaitees/Senitment-Analysis/blob/master/Amazon%20Product%20Sentiment%20Analysis.ipynb).
+
+If you liked the post, follow my github(**@kampaitees**) to get updates about the upcoming articles. Also, share this article so that it can reach out to the readers who can actually gain from this. Please feel free to discuss anything regarding the post. I would love to hear feedback from you.
