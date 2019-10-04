@@ -1,3 +1,5 @@
 # Senitment Analysis
 
-![Sentiment](images/sentiment.jpg?style=centerme)
+<p align="center"> 
+<img src="images/sentiment.jpg">
+</p>
