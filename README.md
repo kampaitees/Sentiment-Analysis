@@ -281,7 +281,7 @@ Sentiment analysis helps workforce analysts and HR directors cut off employee ch
 
 ## Conclusion
 
-The age of getting meaningful insights from social media data has now arrived with the advance in technology. The above **Amazon** case study gives you a glimpse of the power of Contextual Semantic Search. It’s time for your organization to move beyond overall sentiment and count-based metrics. Companies have been leveraging the power of data lately, but to get the deepest of the information, you have to leverage the power of AI, Deep learning and intelligent classifiers like Contextual Semantic Search and Sentiment Analysis.
+The age of getting meaningful insights from social media data has now arrived with the advance in technology. The above **Amazon review** case study gives you a glimpse of the power of Contextual Semantic Search. It’s time for your organization to move beyond overall sentiment and count-based metrics. Companies have been leveraging the power of data lately, but to get the deepest of the information, you have to leverage the power of AI, Deep learning and intelligent classifiers like Contextual Semantic Search and Sentiment Analysis.
 
 Hope I have made justice to Tf-Idf features in this article. I have tried to explain the usefulness of these features with sentiment analysis application. Beginners are encouraged to implement it, match their outputs with the results shown here. Also, try to analyse the difference between conventional word count features and tf-idf weighted features.
 
