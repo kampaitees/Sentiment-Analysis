@@ -60,10 +60,10 @@ Here we break the sentence into it's component words then calculate the count of
 
 **Word Count Vector for the above sentence will be like**
 
- |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
- |   1   |  2  |   1    |   3   |    1   |     1     |   1   |  2  |      2       |    2   |   1  |    1   |    1    |   1   |       
- |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
- |  Wow  |  I  |  love  |  the  |  dish  |  prepare  | here  | in  |  restaurant  |  this  |  is  |  best  |  think  | city  |                     
+     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
+     |   1   |  2  |   1    |   3   |    1   |     1     |   1   |  2  |      2       |    2   |   1  |    1   |    1    |   1   |       
+     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
+     |  Wow  |  I  |  love  |  the  |  dish  |  prepare  | here  | in  |  restaurant  |  this  |  is  |  best  |  think  | city  |                     
 
 Above vewcotr is the **Word Count** vector but you will be wondering that I didn't included '!', '.' and why 'prepare' instead of 'prepared' because the punctuation marks don't tell anything about the sentiment and also whether the verb is past or present it doesn't matter so all these things are removed while using different **NLP** libraries.
 
@@ -102,9 +102,47 @@ Here, ‘N’ is the total number of files in the corpus ‘D’ and ‘Nt ∈ d
 
 Enough with the theory part, let’s get hands on and write python code for extracting such features using **GraphLab** machine learning library. It is an open source python ML library which can be used by separate installation following [this](https://turi.com/download/install-graphlab-create.html).
 
+### Importing Libraries
+Though there is only one library we have to import because we are using **Graph Lab** otherwise for NLP we have to use multiple libraries if we use **NLTk**, **Spacy**, **Sklearn** etc...
+
+`import graphlab as gl`
+
+### Loading Dataset
+ 
+`products = graphlab.SFrame('amazon_baby.gl/')`
+`products.head(5)`
+
+![Dataset](images/2019-10-04%20(8).png)
+
+### Exploratory Data Analysis
+
+`products['rating'].show()`
+![Histogram1](images/histogram_Value%20of%20_SArray_.png)
+![Histogram2](images/2019-10-04%20(2).png)
+
+`products['rating'].show(view = 'Categorical)`
+![Histogram4](images/2019-10-04%20(3).png)
+
+`products['name'].show()`
+![Bar Graph](images/2019-10-04%20(4).png)
+
+`products.show()`
+![Graph](images/2019-10-04%20(9).png)
+
+### Add Word Count Vector to exiting SFrame
+
+`products['word_count'] = graphlab.text_analytics.count_words(products['review'])`
+`products.head(5)`
+![View](images/2019-10-04%20(6).png)
+
+### Examining the reviews for most-sold product: 'Vulli Sophie the Giraffe Teether'
+
+`giraffe_reviews = products[products['name'] == 'Vulli Sophie the Giraffe Teether']`
+`giraffe_reviews['rating'].show(view='Categorical')`
+![Histogram3](images/2019-10-04%20(1).png)
 
 
-                                        
+
 ## Applications
 
 **How is sentiment analysis used?**
