@@ -232,6 +232,6 @@ Hope I have made justice to Tf-Idf features in this article. I have tried to exp
 
 The machine learning models (Logistic Regression) have been implemented here without giving a mathematical background. It may overwhelm the readers with so much information in a single article. One may apply other variants of these classifiers and other classifiers available in the **Graph Lab** to make comparison and analyse the underlying differences among them. Here, the purpose was to present an understanding of **Word Count** and **Term Frequency & Inverse Document Frequency** and its importance in text mining applications.
 
-In addition, the full python implementation of sentiment analysis on polarity movie review data-set using both types of features can be found on GitHub link [here](https://github.com/kampaitees/Senitment-Analysis/blob/master/Amazon%20Product%20Sentiment%20Analysis.ipynb).
+In addition, the full python implementation of sentiment analysis on **Amazon review** dataset using **Logistic Regression** can be found on GitHub link [here](https://github.com/kampaitees/Senitment-Analysis/blob/master/Amazon%20Product%20Sentiment%20Analysis.ipynb).
 
 If you liked the post, follow my GitHub(**@kampaitees**) to get updates about the upcoming articles. Also, share this article so that it can reach out to the readers who can gain from this. Please feel free to discuss anything regarding the post. I would love to hear feedback from you.
