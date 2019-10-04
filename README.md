@@ -59,6 +59,7 @@ Here we break the sentence into it's component words then calculate the count of
     Wow!, I love the dish prepared here in the restaurant. This is the best restaurant I think in this city
 
 **Word Count Vector for the above sentence will be like**
+
      |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|
      | **1** |**2**| **1**  | **3** |  **1** |   **1**   | **1** |**2**|    **2**     |  **2** | **1**|  **1** |  **1**  | **1** |
      |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|
