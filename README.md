@@ -60,14 +60,14 @@ Here we break the sentence into it's component words then calculate the count of
 
 **Word Count Vector for the above sentence will be like**
 
- |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|           
- |   **1**   |  **2**  |   **1**    |   **3**   |    **1**   |     **1**     |   **1**   |  **2**  |      **2**       |    **2**   |   **1**  |    **1**   |    **1**    |   **1**   |           
- |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|           
- | *Wow* | *I* | *love* | *the* | *dish* | *prepare* |*here* |*in* | *restaurant* | *this* | *is* | *best* | *think* |*city* |           
+     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
+     |   1   |  2  |   1    |   3   |    1   |     1     |   1   |  2  |      2       |    2   |   1  |    1   |    1    |   1   |       
+     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
+     |  Wow  |  I  |  love  |  the  |  dish  |  prepare  | here  | in  |  restaurant  |  this  |  is  |  best  |  think  | city  |           
 
 Above vewcotr is the **Word Count** vector but you will be wondering that I didn't included '!', '.' and why 'prepare' instead of 'prepared' because the punctuation marks don't tell anything about the sentiment and also whether the verb is past or present it doesn't matter so all these things are removed while using different **NLP** libraries.
 
-So same **word Count** vector will be created for all the sentences and in the above word count vector I had included only the words which are in the sentence but while doing using libraries there different corpus of words which are already there in the libraries like in **NLTK** there are around 10000 words so only a new dicitonary is created every time and count is included in those dictionaries.
+So same **word Count** vector will be created for all the sentences and in the above **Word Count** vector I had included only the words which are in the sentence but while doing using libraries there different corpus of words which are already there in the libraries like in **NLTK** there are around 10000 words so only a new dicitonary is created every time and count is included in those dictionaries.
 So from this we can see that this type of vectors are very sparse as out of 10000 words there is possiblity that only 10-20 words are there in a sentence so rest are just zero's.
 so after calculating the **Word Count** vector we feed this vector to the classifier to train it and later it can be used to predict the sentiment of the sentence.
 
