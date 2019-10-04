@@ -60,10 +60,10 @@ Here we break the sentence into it's component words then calculate the count of
 
 **Word Count Vector for the above sentence will be like**
 
-     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
-     |   1   |  2  |   1    |   3   |    1   |     1     |   1   |  2  |      2       |    2   |   1  |    1   |    1    |   1   |       
-     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
-     |  Wow  |  I  |  love  |  the  |  dish  |  prepare  | here  | in  |  restaurant  |  this  |  is  |  best  |  think  | city  |           
+ |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
+ |   1   |  2  |   1    |   3   |    1   |     1     |   1   |  2  |      2       |    2   |   1  |    1   |    1    |   1   |       
+ |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
+ |  Wow  |  I  |  love  |  the  |  dish  |  prepare  | here  | in  |  restaurant  |  this  |  is  |  best  |  think  | city  |                     
 
 Above vewcotr is the **Word Count** vector but you will be wondering that I didn't included '!', '.' and why 'prepare' instead of 'prepared' because the punctuation marks don't tell anything about the sentiment and also whether the verb is past or present it doesn't matter so all these things are removed while using different **NLP** libraries.
 
