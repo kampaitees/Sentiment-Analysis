@@ -14,6 +14,27 @@ Sentiment Analysis(Opinion mining) is the process of determining whether a piece
 
 Sentiment analysis helps data analysts within large enterprises gauge public opinion, conduct nuanced market research, monitor brand and product reputation, and understand customer experiences. In addition, data analytics companies often integrate third-party sentiment analysis APIs into their customer experience management, social media monitoring, or workforce analytics platform, to deliver useful insights to their customers.
 
+## Core Buildnig Block
+
+                                                       
+                                                        SENTENCE
+                                                           ||
+                                                           ||
+                                                           ||
+                                                           \/
+                                                 |----------------------|
+                                                 |  Sentence Sentiment  |
+                                                 |      Classifier      |
+                                                 |----------------------|     
+                                                          /  \
+                                                         /    \
+                                                        /      \
+                                                       /        \
+                                               |----------|    |----------|
+                                               | POSITIVE |    | NEGATIVE |
+                                               |----------|    |----------|
+                                               
+                                               
 ## How does sentiment analysis work?
 
 ### The basics
