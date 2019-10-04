@@ -1,2 +1,4 @@
 # Senitment Analysis
-![Senitment](images/sentiment.jpg)
+<p align="center">
+  <img src = "https://github.com/kampaitees/Senitment-Analysis/tree/master/images/sentiment.jpg"/>
+</p>
