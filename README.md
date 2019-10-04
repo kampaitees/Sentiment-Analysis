@@ -114,7 +114,7 @@ Though there is only one library we have to import because we are using **Graph 
 
 `products.head(5)`
 
-![Dataset](images/2019-10-04%20(8).png)
+![Dataset](images/2019-10-05%20(8).png)
 
 ## Exploratory Data Analysis
 
@@ -125,7 +125,7 @@ Though there is only one library we have to import because we are using **Graph 
 
 `products['rating'].show(view = 'Categorical)`
 
-![Histogram4](images/2019-10-04%20(3).png)
+![Histogram4](images/2019-10-05%20(3).png)
 
 `products['name'].show()`
 
@@ -133,7 +133,7 @@ Though there is only one library we have to import because we are using **Graph 
 
 `products.show()`
 
-![Graph](images/2019-10-04%20(9).png)
+![Graph](images/2019-10-05%20(9).png)
 
 ## Add Word Count Vector to exiting SFrame
 
@@ -141,7 +141,7 @@ Though there is only one library we have to import because we are using **Graph 
 
 `products.head(5)`
 
-![View](images/2019-10-04%20(6).png)
+![View](images/2019-10-05%20(6).png)
 
 ## Examining the reviews for most-sold product: 'Vulli Sophie the Giraffe Teether'
 
@@ -149,7 +149,7 @@ Though there is only one library we have to import because we are using **Graph 
 
 `giraffe_reviews['rating'].show(view='Categorical')`
 
-![Histogram3](images/2019-10-04%20(1).png)
+![Histogram3](images/2019-10-05%20(1).png)
 
 ## Define what's a positive and a negative sentiment
 
