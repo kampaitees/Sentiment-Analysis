@@ -44,13 +44,31 @@ When you read the sentences above, your brain draws on your accumulated knowledg
 
 So, why are we using baseball games to explain how human brains do sentiment analysis? The answer is simple: **computer sentiment analysis works (almost) the same way.**
 
-In order to calculate the sentiment of a sentence first that sentence should be in the form that is readable by machine, and we know that machine understands only number(text is not readable by machine) so we have to map the text of sentence into some numbers so that it can b feed to the machine and apply the machine learning algorithm to calculate the sentiment of sentence. There are many ways where this can be done, like using :
+In order to calculate the sentiment of a sentence first that sentence should be in the form that is readable by machine, and we know that machine understands only number(text is not readable by machine) so we have to map the text of sentence into some numbers so that it can b feed to the machine and apply the machine learning algorithm to calculate the sentiment of sentence. There are many ways where the preprocessing of input sentence can be done :
 
     - Word Count
     - Tf-Idf Vector
-
 etc...
 
+In this article we are going to discuss **Word Count**, **Tf-Idf** method only.
+
+## What is Word Count method
+Here we break the sentence into it's component words then calculate the count of the each word and store the information in form of python dicitonary with word as a key and count of each word as value of that key.
+
+**Example**
+    Wow!, I love the dish prepared here in the restaurant. This is the best restaurant I think in this city
+
+**Word Count Vector for the above sentence will be like**
+     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|
+     | **1** |**2**| **1**  | **3** |  **1** |   **1**   | **1** |**2**|    **2**     |  **2** | **1**|  **1** |  **1**  | **1** |
+     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|
+     | *Wow* | *I* | *love* | *the* | *dish* | *prepare* |*here* |*in* | *restaurant* | *this* | *is* | *best* | *think* |*city* | 
+
+Above vewcotr is the **Word Count** vector but you will be wondering that I didn't included '!', '.' and why 'prepare' instead of 'prepared' because the punctuation marks don't tell anything about the sentiment and also whether the verb is past or present it doesn't matter so all these things are removed while using different **NLP** libraries.
+
+So same **word Count** vector will be created for all the sentences and in the above word count vector I had included only the words which are in the sentence but while doing using libraries there different corpus of words which are already there in the libraries like in **NLTK** there are around 10000 words so only a new dicitonary is created every time and count is included in those dictionaries.
+So from this we can see that this type of vectors are very sparse as out of 10000 words there is possiblity that only 10-20 words are there in a sentence so rest are just zero's.
+so after calculating the **Word Count** vector we feed this vector to the classifier to train it and later it can be used to predict the sentiment of the sentence.
 
 ## Applications
 
