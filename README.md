@@ -121,6 +121,41 @@ Here, ‘N’ is the total number of files in the corpus ‘D’ and ‘Nt ∈ d
 
                                         tf-idf(t,d,D) = tf(t,d) . idf(t,D)
 
+Let's take the above example of **Word Count** method:
+
+**Term Freuency Vector**
+
+     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
+     |   1   |  2  |   1    |   3   |    1   |     1     |   1   |  2  |      2       |    2   |   1  |    1   |    1    |   1   |       
+     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
+     |  Wow  |  I  |  love  |  the  |  dish  |  prepare  | here  | in  |  restaurant  |  this  |  is  |  best  |  think  | city  |
+     
+
+Yes!, term frequency vector will remain same because it is nothing but frequency of the each in the sentence. Whatever, changes are there is reflected form the **Inverse Document Ferequency** vector.
+
+**Inverse Document Frequency Vector**
+
+     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
+     | 2.493 | .04 |  3.18  | 0.002 |  0.03  |  0.00784  | 0.041 | .01 |    0.0456    | 0.0034 | .002 |  3.99  |  0.16   | 0.145 |      
+     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
+     |  Wow  |  I  |  love  |  the  |  dish  |  prepare  | here  | in  |  restaurant  |  this  |  is  |  best  |  think  | city  | 
+
+
+**Final Vector(Input to the Machine Learning Model)**
+
+                                Term Freuency Vector * Inverse Document Frequency Vector
+                                                         ||
+                                                         ||
+                                                         ||
+                                                         \/
+                                                         
+     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
+     | 2.493 | .08 |  3.18  | 0.006 |  0.03  |  0.00784  | 0.041 | .02 |    0.0912    | 0.0068 | .002 |  3.99  |  0.16   | 0.145 |      
+     |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
+     |  Wow  |  I  |  love  |  the  |  dish  |  prepare  | here  | in  |  restaurant  |  this  |  is  |  best  |  think  | city  |
+
+As we know that the sentiment from the sentence is **Positive** so the words which are actaully positive from the sentence are **Wow**, **love**, **best**. From final product of **TF & IDF** we can see that more weightage is given to these important words than unimportant words like **I**, **the**, **i** etc.. thus in this we can say that this method is going to work far more better than **Word Count** method as here we are giving more accurate data to the alogrithm than before.
+
 Enough with the theory part, let’s get hands-on and write python code for extracting such features using **GraphLab** machine learning library. It is an open-source python ML library which can be used by separate installation following [this](https://turi.com/download/install-graphlab-create.html).
 
 ## Importing Libraries
