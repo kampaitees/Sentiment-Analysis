@@ -27,16 +27,16 @@ Basic sentiment analysis of text documents follows a straightforward process:
 
 As you’ll see, the underlying technology is very complicated. But for a simple explanation of sentiment analysis, consider these sentences:
 
-    Terrible pitching and awful hitting led to another crushing loss.
-    Bad pitching and mediocre hitting cost us another close game.
+                            Terrible pitching and awful hitting led to another crushing loss.
+                            Bad pitching and mediocre hitting cost us another close game.
 
 Both sentences discuss a similar subject, the loss of a baseball game. But you, the human reading them, can clearly see that first sentence’s tone is much more negative.
 
 Your brain figures this out by looking for and interpreting sentiment-bearing phrases – that is, words and phrases that carry a tone or opinion. These usually appear as adjective-noun combinations. In the examples above, the sentiment-bearing phrases are:
 
-    Terrible pitching | awful hitting | crushing loss
+                                    Terrible pitching | awful hitting | crushing loss
 
-    Bad pitching | mediocre hitting | close game
+                                    Bad pitching | mediocre hitting | close game
     
 You have encountered words like these many thousands of times over your lifetime across a range of contexts. And from these experiences, you’ve learned to understand the strength of each adjective, receiving input and feedback along the way from teachers and peers.
 
@@ -46,8 +46,8 @@ So, why are we using baseball games to explain how human brains do sentiment ana
 
 In order to calculate the sentiment of a sentence first that sentence should be in the form that is readable by machine, and we know that machine understands only number(text is not readable by machine) so we have to map the text of sentence into some numbers so that it can b feed to the machine and apply the machine learning algorithm to calculate the sentiment of sentence. There are many ways where the preprocessing of input sentence can be done :
 
-    - Word Count
-    - Tf-Idf Vector
+                                                         Word Count
+                                                         Tf-Idf Vector
 etc...
 
 In this article we are going to discuss **Word Count**, **Tf-Idf** method only.
