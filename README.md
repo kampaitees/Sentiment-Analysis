@@ -100,7 +100,7 @@ Here, ‘N’ is the total number of files in the corpus ‘D’ and ‘Nt ∈ d
 
                                         tf-idf(t,d,D) = tf(t,d) . idf(t,D)
 
-Enough with the theory part, let’s get hands-on and write python code for extracting such features using **GraphLab** machine learning library. It is an open-source python ML library which can be used by separate installation following [this].(https://turi.com/download/install-graphlab-create.html).
+Enough with the theory part, let’s get hands-on and write python code for extracting such features using **GraphLab** machine learning library. It is an open-source python ML library which can be used by separate installation following [this](https://turi.com/download/install-graphlab-create.html).
 
 ## Importing Libraries
 
