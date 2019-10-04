@@ -107,71 +107,67 @@ Enough with the theory part, let’s get hands on and write python code for extr
 ## Importing Libraries
 Though there is only one library we have to import because we are using **Graph Lab** otherwise for NLP we have to use multiple libraries if we use **NLTk**, **Spacy**, **Sklearn** etc...
 
-`import graphlab as gl
-`
+```import graphlab as gl```
 
 ## Loading Dataset
  
-`products = graphlab.SFrame('amazon_baby.gl/')`
+```products = graphlab.SFrame('amazon_baby.gl/')```
 
-`products.head(5)`
+```products.head(5)```
 
 ![Dataset](images/2019-10-05%20(8).png)
 
 ## Exploratory Data Analysis
 
-`products['rating'].show()`
+```products['rating'].show()```
 
 ![Histogram1](images/histogram_Value%20of%20_SArray_.png)
 ![Histogram2](images/2019-10-04%20(2).png)
 
-`products['rating'].show(view = 'Categorical)`
+```products['rating'].show(view = 'Categorical)```
 
 ![Histogram4](images/2019-10-05%20(3).png)
 
-`products['name'].show()`
+```products['name'].show()```
 
 ![Bar Graph](images/2019-10-04%20(4).png)
 
-`products.show()`
+```products.show()```
 
 ![Graph](images/2019-10-05%20(9).png)
 
 ## Add Word Count Vector to exiting SFrame
 
-`products['word_count'] = graphlab.text_analytics.count_words(products['review'])`
+```products['word_count'] = graphlab.text_analytics.count_words(products['review'])```
 
-`products.head(5)`
+```products.head(5)```
 
 ![View](images/2019-10-05%20(6).png)
 
 ## Examining the reviews for most-sold product: 'Vulli Sophie the Giraffe Teether'
 
-`giraffe_reviews = products[products['name'] == 'Vulli Sophie the Giraffe Teether']`
+```giraffe_reviews = products[products['name'] == 'Vulli Sophie the Giraffe Teether']```
 
-`giraffe_reviews['rating'].show(view='Categorical')`
+```giraffe_reviews['rating'].show(view='Categorical')```
 
 ![Histogram3](images/2019-10-05%20(1).png)
 
 ## Define what's a positive and a negative sentiment
 
-`products = products[products['rating'] != 3]`
+```products = products[products['rating'] != 3]```
 
-`products['sentiment'] = products['rating'] >=4`
-
-`products.head(5)`
+```products['sentiment'] = products['rating'] >=4```
+ 
+```products.head(5)```
 
 ![View](images/2019-10-04%20(7).png)
 
 
 ## Let's train the Classifier(Logistic Regression)
 
-`train_data,test_data = products.random_split(.8, seed=0)`
+```train_data,test_data = products.random_split(.8, seed=0)```
 
-`sentiment_model = graphlab.logistic_classifier.create(train_data,
-                                                     target='sentiment',
-                                                     features=['word_count'],
-                                                     validation_set=test_data)`
+```sentiment_model = graphlab.logistic_classifier.create(train_data, target='sentiment', features=['word_count'],     validation_set=test_data)```
                                                      
 ![Model1](images/2019-10-04%20(11).png)                                
  
@@ -179,11 +175,11 @@ Though there is only one library we have to import because we are using **Graph 
 
 ## Evaluate the sentiment model
 
-`sentiment_model.evaluate(test_data, metric='roc_curve')`
+```sentiment_model.evaluate(test_data, metric='roc_curve')```
 
 ![Evaluate1](images/2019-10-04%20(12).png)
  
- `sentiment_model.show(view='Evaluation')`
+```sentiment_model.show(view='Evaluation')```
 
 ![Evaluate2](images/line_False%20Positive%20Rate_True%20Positive%20Rate.png)
  
@@ -191,24 +187,24 @@ Though there is only one library we have to import because we are using **Graph 
  
 ## Applying the learned model to understand sentiment for Giraffe
 
-`giraffe_reviews['predicted_sentiment'] = sentiment_model.predict(giraffe_reviews, output_type='probability')`
+```giraffe_reviews['predicted_sentiment'] = sentiment_model.predict(giraffe_reviews, output_type='probability')```
 
-`giraffe_reviews.head()`
+```giraffe_reviews.head()```
 
 ![View](images/2019-10-04%20(14).png)
 
 ## Sort the reviews based on the predicted sentiment and explore¶
 
-`giraffe_reviews = giraffe_reviews.sort('predicted_sentiment', ascending=False)`
-
-`giraffe_reviews.head()`
+```giraffe_reviews = giraffe_reviews.sort('predicted_sentiment', ascending=False)```
+ 
+```giraffe_reviews.head()```
 
 ![View](images/2019-10-04%20(15).png)
 
 ## Most positive reviews for the giraffe
 
-`giraffe_reviews[0]['review']`
-
+```giraffe_reviews[0]['review']```
+ 
 ![Review](images/2019-10-04%20(16).png)
 
 
