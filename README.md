@@ -143,11 +143,11 @@ Yes!, term frequency vector will remain same because it is nothing but frequency
 
 **Final Vector(Input to the Machine Learning Model)**
 
-                                Term Freuency Vector * Inverse Document Frequency Vector
-                                                         ||
-                                                         ||
-                                                         ||
-                                                         \/
+                                        Term Frequency Vector * Inverse Document Frequency 
+                                                             ||
+                                                             ||
+                                                             ||
+                                                             \/
                                                          
      |-------|-----|--------|-------|--------|-----------|-------|-----|--------------|--------|------|--------|---------|-------|       
      | 2.493 | .08 |  3.18  | 0.006 |  0.03  |  0.00784  | 0.041 | .02 |    0.0912    | 0.0068 | .002 |  3.99  |  0.16   | 0.145 |      
