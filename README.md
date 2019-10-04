@@ -46,8 +46,8 @@ So, why are we using baseball games to explain how human brains do sentiment ana
 
 In order to calculate the sentiment of a sentence first that sentence should be in the form that is readable by machine, and we know that machine understands only number(text is not readable by machine) so we have to map the text of sentence into some numbers so that it can b feed to the machine and apply the machine learning algorithm to calculate the sentiment of sentence. There are many ways where the preprocessing of input sentence can be done :
 
-**Word Count
-Tf-Idf Vector**
+**Word Count**
+**Tf-Idf Vector**
 
 etc...
 
