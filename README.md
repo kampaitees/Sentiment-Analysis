@@ -289,4 +289,4 @@ The machine learning models (Logistic Regression) have been implemented here wit
 
 In addition, the full python implementation of sentiment analysis on **Amazon review** dataset using **Logistic Regression** can be found on GitHub link [here](https://github.com/kampaitees/Senitment-Analysis/blob/master/Amazon%20Product%20Sentiment%20Analysis.ipynb).
 
-If you liked the post, follow my GitHub(**@kampaitees**) to get updates about the upcoming articles. Also, share this article so that it can reach out to the readers who can gain from this. Please feel free to discuss anything regarding the post. I would love to hear feedback from you.
+If you liked the post, follow my GitHub([**@kampaitees**](https://github.com/kampaitees)) to get updates about the upcoming articles. Also, share this article so that it can reach out to the readers who can gain from this. Please feel free to discuss anything regarding the post. I would love to hear feedback from you.
