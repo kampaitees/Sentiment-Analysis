@@ -1,4 +1,4 @@
-# Sentiment Analysis: Concept, Analysis & Applications
+# Sentiment Analysis: Concept, Analysis and Applications
 
 <p align="center"> 
 <img src="images/sentiment.jpg">
