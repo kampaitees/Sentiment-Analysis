@@ -54,6 +54,7 @@ As you’ll see, the underlying technology is very complicated. But for a simple
 Both sentences discuss a similar subject, the loss of a baseball game. But you, the human reading them, can see that the first sentence’s tone is much more negative.
 
 Your brain figures this out by looking for and interpreting sentiment-bearing phrases – that is, words and phrases that carry a tone or opinion. These usually appear as adjective-noun combinations. In the examples above, the sentiment-bearing phrases are:
+
                             Terrible pitching | awful hitting | crushing loss
 
                             Bad pitching | mediocre hitting | close game    
